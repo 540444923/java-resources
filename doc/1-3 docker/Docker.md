@@ -477,6 +477,14 @@ docker pull nginx
 docker run -di --name=mynginx -p 80:80 nginx
 ```
 
+（3）进入Nginx容器中，查看nginx文件配置的位置
+
+```
+docker exec -it mynginx /bin/bash
+// 配置文件位置 /etc/nginx/nginx.conf
+// 静态文件位置 /usr/share/nginx/html
+```
+
 ## 4.4 Redis部署
 
 （1）拉取镜像
@@ -498,6 +506,7 @@ docker run -di --name=myredis -p 6379:6379 redis
 我们可以通过以下命令将容器保存为镜像
 
 ```
+// docker commit 已有容器名 新的镜像名字
 docker commit mynginx mynginx_i
 ```
 
