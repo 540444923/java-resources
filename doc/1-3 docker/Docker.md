@@ -506,6 +506,7 @@ docker run -di --name=myredis -p 6379:6379 redis
 我们可以通过以下命令将容器保存为镜像
 
 ```
+// docker commit 已有容器名 新的镜像名字
 docker commit mynginx mynginx_i
 ```
 
